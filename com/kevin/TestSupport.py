@@ -28,12 +28,14 @@ class imageSupport(object):
         img = Image.open(path)
         return img
     
+    # A method to show the picture differences by blending reference image and actual snapshot.
     def imageBlendComparison(self, testImgPath, refImgPath, diffPath, alpha=0.5):
         testImg = self.getImage(testImgPath)
         refImg = self.getImage(refImgPath)
         tmpImg = ImageChops.invert(testImg)
         Image.blend(refImg, tmpImg, alpha).save(diffPath)
 
+    # A method to make pixel comparison between reference image and acutal snapshot.
     def imagePixelComparison(self, testImgPath, refImgPath, region=None, percent=1.0):
         if region is None:
             testImg = self.getImage(testImgPath)
