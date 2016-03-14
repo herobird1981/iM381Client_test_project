@@ -13,6 +13,8 @@ class genericSupport(object):
     charList = ['a','b','c','d','e','f','g','h','i','j','k','l', \
                 'm','n','o','p','q','r','s','t','u','v','w','x','y','z']
     
+   
+    # A method to set testing rounds for certain testing case.	
     def setTestCycle(self, testcase, count=1):
         suite = unittest.TestSuite()
         for i in range(0,count):
