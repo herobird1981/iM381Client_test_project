@@ -25,7 +25,8 @@ class genericSupport(object):
 class imageSupport(object):
     
     _DEBUG = True
-    
+   
+    # Get a image object from a specified path. 
     def getImage(self, path):
         img = Image.open(path)
         return img
