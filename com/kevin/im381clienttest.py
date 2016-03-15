@@ -72,7 +72,7 @@ class im381ClientTests(unittest.TestCase):
         self.assertSequenceEqual(expectedActivity, currentActivity, 'testLoginActivityLaunch() --- Failed')
     
     
-    '''Perform account login functionality'''
+    '''Perform account login function'''
     @unittest.skipIf(_isLoginSucceed, 'Already logged in. Skipped the test case')
     def test3_LoginFunction_with_CorrectAccountInfo(self):
         #isLoginSucceed = False
